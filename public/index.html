@@ -1,0 +1,88 @@
+<!doctype html>
+<html ng-app='bandApp'>
+<head>
+  <title>instruments</title>
+  <link rel="stylesheet" href='css/styles.css' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body ng-controller="mainCtrl" class="bodyC">
+  <header class="topHeader">
+    Dan The Band Man
+  </header>
+
+<header class="bandHead">
+  The best used band instruments
+</header>
+  <header class="mainHeader">
+    <a ui-sref='location' class="menuBut">location</a>
+    <a class="menuBut" id='imenuDroper' ui-sref='maintHome'>maintenance</a>
+    <a ui-sref="about" class="menuBut">about us</a>
+    <a class="menuBut" id="imenuDrop" ui-sref='instruments' ng-click="search = {type:''}">instruments</a>
+    <a ui-sref="home" class="menuBut">home</a>
+
+  </header>
+    <div class="instrDrop">
+      <a class="instrBut" ui-sref='instruments' ng-click="search = {type:'Clarinet'}">Clarinet</a>
+      <a class="instrBut" ui-sref='instruments' ng-click="search = {type:'Saxophone'}">Saxophone</a>
+      <a class="instrBut" ui-sref='instruments' ng-click="search = {type:'Trumpet'}">Trumpet</a>
+      <a class="instrBut" ui-sref='instruments' ng-click="search = {type:'Flute'}">Flute</a>
+      <a class="instrBut" ui-sref='instruments' ng-click="search = {type:'Other'}">Other</a>
+
+    </div>
+    <div class="instrDroper">
+      <a ui-sref='clarinetM' class="instrBut">Clarinet</a>
+      <a ui-sref='saxophoneM'class="instrBut">Saxophone</a>
+      <a ui-sref='trumpetM' class="instrBut">Trumpet</a>
+      <a ui-sref='fluteM'class="instrBut">Flute</a>
+    </div>
+    <div class="cartHolder">
+      <ngcart-summary id="cartS"></ngcart-summary>
+
+      <ngcart-cart id="cartD" style="display:none"></ngcart-cart>
+      <i class="fa fa-times" id="closeCart" ng-click="hideCart()">Close Cart</i>
+        <ngcart-checkout id="checkoutBut"  service="paypal" settings="{paypal:{ business:'jvanwag08@gmail.com', item_number:'1', currency_code:'USD' }}"></ngcart-checkout>
+
+    </div>
+
+  <ui-view></ui-view>
+
+  <div class="contBox" id="contForm">
+    <i class="fa fa-times" id="closeForm" ng-click="hideForm()"></i>
+      <form class="eForm" action="https://formspree.io/jvanwag08@gmail.com" method="POST">
+        <!-- <form class="eForm" action="MAILTO:jvanwag08@gmail.com" method="POST"> -->
+        <div class="infoBox">
+        Name:<br />
+        <input type ="text" name="name" required="true"/><br />
+        Email:<br />
+        <input  type ="text" name="email" required="true" /><br />
+      </div>
+      <input type="text" name="_gotcha" style="display:none" />
+        <textarea class = "emailBox" type ="text" name="body" required="true"></textarea>
+        <input class ='subBut' type="submit" value="Send">
+        <input type="hidden" name="_next" value="/" />
+      </form>
+  </div>
+  <footer class='footy'>
+  <button class='footyBut' ng-click="showForm()">Contact Me</button>
+  </footer>
+  <footer class='botFoot' ui-sref="admin">
+    Admin
+  </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.angularjs.org/1.5.0/angular.js"></script>
+  <script type='text/javascript' src="bower_components/ngCart/dist/ngCart.js"></script>
+  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdn.firebase.com/libs/angularfire/1.1.4/angularfire.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+  <script type='text/javascript' src="http://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js"></script>
+
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="controllers/mapCtrl.js"></script>
+  <script type="text/javascript" src="controllers/mainCtrl.js"></script>
+  <script type="text/javascript" src="controllers/adminCtrl.js"></script>
+  <script type="text/javascript" src="services/adminSvc.js"></script>
+</body>
+</html>

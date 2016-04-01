@@ -1,0 +1,38 @@
+<div class="adminPage">
+<form class="addInst" name="newInstrumentForm">
+  <span class="addHead">Add Instruments</span></br>
+  <input class="bandInput" type='text' ng-model='instrument.brand' placeholder="brand" required/>
+  <input class="bandInput" type='text' ng-model='instrument.model' placeholder="model" required/>
+  <select ng-model='instrument.type'>
+    <option value = "Clarinet">Clarinet</option>
+    <option value = "Saxophone">Saxophone</option>
+    <option value = "Flute">Flute</option>
+    <option value = "Trumpet">Trumpet</option>
+    <option value = "Other">Other</option>
+  </select></br>
+  <input class="bandInput" type="number" ng-model="instrument.price" placeholder="price" required/></br>
+  <input class="bandInput" type="url" ng-model="instrument.picture" placeholder="image url" required/>
+  <input class="bandInput" type="url" ng-model="instrument.pictwo" placeholder="second image url" />
+  <input class="bandInput" type="url" ng-model="instrument.picthree" placeholder="third image url" />
+  <textarea class="infoInput" type="text" ng-model="instrument.info" placeholder="info" required></textarea></br>
+  <button ng-disabled="newInstrumentForm.$invalid" class="addBut" ng-click='addInstrument(instrument)'>submit</button>
+</form>
+
+<div class="changeForm">
+  <span class="addHead">Remove Instruments</span></br>
+  <select ng-model="search" ng-click="showInfo()">
+    <option  ng-repeat='instrument in instruments' value="{{instrument._id}}">{{instrument.brand}}-{{instrument.model}}</option>
+  </select>
+
+  <div class ="changeDisp" id="infoB" style="display:none" ng-repeat="instrument in instruments| filter: search">
+  <strong>Type:</strong>{{instrument.type}}
+  <strong>ID:</strong>{{instrument._id}}</br>
+  <strong>Brand:</strong>{{instrument.brand}}  <strong>Model:</strong>{{instrument.model}}</br>
+
+<strong>pictures:</strong><img class="tinyPic" src='{{instrument.picture}}' /><img class="tinyPic" src='{{instrument.pictwo}}' /><img class="tinyPic" src='{{instrument.picthree}}' /></br>
+<strong>info:</strong>{{instrument.info}}</br>
+<button ng-click='deleteInstrument(instrument)'>Delete</button>
+  </div>
+</div>
+
+</div>

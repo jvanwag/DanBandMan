@@ -1,0 +1,357 @@
+body {
+  position: relative;
+}
+.topHeader {
+  text-align: center;
+  font-family:helvetica;
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+  padding-top: .5%;
+  font-size: 4vh;
+}
+.bandHead {
+  text-align: center;
+  font-family:helvetica;
+  background-color: black;
+  color: white;
+  padding-top: .5%;
+  font-size: 2vh;
+}
+.mainHeader {
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  height:50px;
+  position: relative;
+}
+.menuBut {
+  float:right;
+  text-decoration: none;
+  margin-left: 2%;
+  margin-right: 2%;
+  color: white;
+  font-family: helvetica;
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 1.9vh;
+
+}
+.instrDrop {
+  background-color: grey;
+  width:50%;
+  height: 37px;
+  position: relative;
+  position: absolute;
+  right:0;
+  text-align: center;
+  padding-top: 13px;
+  display: none;
+
+}
+.instrDroper {
+  background-color: grey;
+  width:50%;
+  height: 37px;
+  position: relative;
+  position: absolute;
+  right:0;
+  text-align: center;
+  padding-top: 13px;
+  display: none;
+
+}
+
+.instrBut {
+  font-family: helvetica;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 15px;
+  position: relative;
+  text-decoration: none;
+  color:black;
+
+}
+.locBack {
+  /*background-color: blue;*/
+  text-align: center;
+  width: 100%;
+  height:1000px;
+}
+.aboutBack {
+  background-color: red;
+  width:100%;
+  height: 1000px;
+}
+.maintBack {
+  margin-top: 100px;
+
+}
+.maintBot {
+  margin-top: 50px;
+}
+.maintBut {
+  text-decoration: none;
+  font-weight: bolder;
+  color: black;
+  font-size: 7vh;
+  margin-right: 5%;
+  margin-left: 20%;
+  font-family:helvetica;
+}
+.contBox {
+  width:50%;
+  height: 500px;
+  background-color: #bbdefb;
+  position: fixed;
+  right:0;
+  bottom:0;
+  z-index: 1;
+  border-top-left-radius: 10px;
+  display: none;
+}
+#closeForm {
+  position: absolute;
+  left:15px;
+  top:15px;
+  font-size: 20px;
+
+}
+.eForm {
+    text-align: center;
+}
+.infoBox {
+  font-family: helvetica;
+  margin-top: 7%;
+  text-align: left;
+  margin-left: 12%;
+}
+.emailBox {
+  margin-top: 5%;
+  width:75%;
+  height:200px;
+}
+.subBut {
+  position: absolute;
+  font-family: helvetica;
+  width: 100px;
+  height: 50px;
+  bottom:60px;
+  right: 13%;
+  margin-top: 5px;
+
+}
+.footy {
+  position: fixed;
+  bottom:0;
+  right:0;
+  width: 25%;
+  height:5vh;
+  font-size: 3vh;
+  font-family: helvetica;
+  text-align: center;
+}
+.footyBut {
+  width:100%;
+  height:100%;
+  font-family:helvetica;
+  font-size: 3vh;
+  background-color: grey;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  z-index: 0;
+}
+#map {
+  width: 90%;
+  height: 500px;
+  margin-top: 50px;
+  margin-right: 5%;
+  margin-left: 5%;
+  border-radius: 10px;
+  /*border-style:solid;*/
+  text-align: center;
+}
+.locHeader {
+  font-family: helvetica;
+  font-size: 4vh;
+  text-align: left;
+  margin-left:5%;
+  margin-top: 3%;
+
+}
+.locInfo {
+  text-align: left;
+  font-family: helvetica;
+  margin-left: 5%;
+  margin-top:1%;
+  font-size: 2vh;
+}
+.adminPage{
+  width: 100%;
+  height:1000px;
+  /*background-color: red;*/
+  /*position: relative;*/
+  margin-top: 5%;
+
+}
+.addInst {
+  margin-top:20px;
+  width:50%;
+  height:350px;
+  /*background-color: blue;*/
+  position: absolute;
+  left:25%;
+}
+.bandInput {
+  margin-top: 1%;
+  margin-left: 1%;
+}
+.infoInput {
+  margin-top: 2%;
+  margin-left:1%;
+  width:90%;
+  height:50%;
+  z-index: 0;
+}
+.addBut {
+  float: right;
+  margin-right: 5%;
+  margin-top: 1%;
+  height:50px;
+  width:125px;
+}
+.addHead {
+  font-family: helvetica;
+  font-size: 3vh;
+  margin-left: 38%;
+}
+.changeForm {
+  width:50%;
+  height:300px;
+  /*background-color: grey;*/
+  position: absolute;
+  margin-top: 450px;
+  left:25%;
+}
+.changeDisp {
+  float: right;
+  font-family: helvetica;
+  margin-right: 4%;
+  margin-top:2%;
+}
+.instrumentList{
+  /*background-color: blue;*/
+  margin-top: 8%;
+}
+.instrDisp {
+  padding:1%;
+  font-family: helvetica;
+  font-size: 2vh;
+  margin-top: 3%;
+  /*background-color: green;*/
+  border-style: solid;
+}
+.innerList {
+  width:50%;
+  /*background-color: red;*/
+  margin-left: 25%;
+  list-style-type: none;
+}
+.iFilters {
+  width:100%;
+  height:30px;
+  float: right;
+  /*background-color: yellow;*/
+  margin-top: 5%;
+  text-align: right;
+  font-family: helvetica;
+}
+.instImg {
+  height: 150px;
+  width: 150px;
+}
+.botFoot {
+  bottom:0;
+}
+.largePic {
+  width:50%;
+  height:600px;
+  /*background-color: grey;*/
+  position: fixed;
+  margin-left: 25%;
+  margin-right: 25%;
+  display:none;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+.bigImg {
+  margin-left: 50px;
+}
+#closePic {
+  position: absolute;
+  left:15px;
+  top:15px;
+  font-size: 20px;
+}
+.tinyPic {
+  width:75px;
+  height:75px;
+}
+.maintHeader {
+  font-family: helvetica;
+  font-size: 4vh;
+  margin-top: 15px;
+  margin-left: 15%;
+
+}
+.maintPage {
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+}
+.maintText {
+  font-family: helvetica;
+}
+.textHolder {
+  width: 45%;
+  margin-left: 5%;
+}
+.maintPic {
+  width:300px;
+  height:200px;
+  margin-top: 30px;
+  margin-left: 75px;
+}
+.picHolder {
+  width:45%;
+  float: right;
+}
+.cartHolder {
+  position:fixed;
+  /*bottom:0;
+  left:0;*/
+  top:1%;
+  right:1%;
+  background-color: white;
+  border-radius: 10px;
+  width:400px;
+
+}
+#closeCart {
+  position: absolute;
+  bottom:10px;
+  left:10px;
+  display:none;
+  font-size:2vh;
+}
+#cartS {
+  /*color:white;*/
+}
+#cartD {
+  z-index:5;
+}
+#checkoutBut {
+  position: absolute;
+  right:0;
+  display:none;
+}
