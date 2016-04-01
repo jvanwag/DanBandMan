@@ -3,14 +3,23 @@
   <span class="addHead">Add Instruments</span></br>
   <input class="bandInput" type='text' ng-model='instrument.brand' placeholder="brand" required/>
   <input class="bandInput" type='text' ng-model='instrument.model' placeholder="model" required/>
-  <select ng-model='instrument.type'>
+  Type:<select ng-model='instrument.type' required>
     <option value = "Clarinet">Clarinet</option>
     <option value = "Saxophone">Saxophone</option>
     <option value = "Flute">Flute</option>
     <option value = "Trumpet">Trumpet</option>
     <option value = "Other">Other</option>
   </select></br>
-  <input class="bandInput" type="number" ng-model="instrument.price" placeholder="price" required/></br>
+  <input class="bandInput" type="number" ng-model="instrument.price" placeholder="price" required/>
+  Subtype:<select ng-model='instrument.subtype' required>
+    <option value = "Accessories">
+      Accessories
+    </option>
+    <option value = "Instrument">
+      Instrument
+    </option>
+  </select>
+  </br>
   <input class="bandInput" type="url" ng-model="instrument.picture" placeholder="image url" required/>
   <input class="bandInput" type="url" ng-model="instrument.pictwo" placeholder="second image url" />
   <input class="bandInput" type="url" ng-model="instrument.picthree" placeholder="third image url" />

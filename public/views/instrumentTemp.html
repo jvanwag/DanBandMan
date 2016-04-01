@@ -4,20 +4,23 @@
 </div>
 
 <div class="iFilters">
-  <select class="instFilter" type="text" ng-model="search.type" style="display:none">
-  <option value = ""></option>
-  <option value = "Clarinet">Clarinet</option>
-  <option value = "Saxophone">Saxophone</option>
-  <option value = "Flute">Flute</option>
-  <option value = "Trumpet">Trumpet</option>
-  <option value = "Other">Other</option>
-</select>
+
   filter price:
-  <input class="instFilter" ng-model="search.price"/>
+  <input class="instFilter" ng-model="search.price"/></br>
+  <span id="typeFilterer">filter instrument:</span><select class="instFilter" id="typeFilter" type="text" ng-model="search.type">
+    <option value = ""></option>
+    <option value = "Clarinet">Clarinet</option>
+    <option value = "Saxophone">Saxophone</option>
+    <option value = "Flute">Flute</option>
+    <option value = "Trumpet">Trumpet</option>
+    <option value = "Other">Other</option>
+  </select>
+
 </div>
 <div class="instrumentList">
    <ul class="innerList">
-       <li class = "instrDisp" ng-repeat="instrument in instruments | orderBy : 'type' | filter: search "><strong>{{instrument.type}}--</strong><strong>{{instrument.brand}}--{{instrument.model}}</strong></br>
+       <li class = "instrDisp" ng-repeat="instrument in instruments | orderBy : 'type' | filter: search "><strong>{{instrument.type}}--</strong><strong>{{instrument.brand}}--{{instrument.model}}</strong>
+       </br>
        ${{instrument.price}}</br><img class="instImg" ng-click="expandPic(instrument.picture)" ng-show="instrument.picture" ng-src="{{instrument.picture}}" /><img class="instImg" ng-click="expandPic(instrument.pictwo)" ng-show="instrument.pictwo" ng-src="{{instrument.pictwo}}" /><img class="instImg" ng-click="expandPic(instrument.picthree)" ng-show="instrument.picthree" ng-src="{{instrument.picthree}}" /></br>{{instrument.info}}
         </br>
        <ngcart-addtocart id="{{instrument._id}}" name="{{instrument.type}}-{{instrument.brand}}-{{instrument.model}}" price="{{instrument.price}}" quantity="1" quantity-max="1">Add to Cart</ngcart-addtocart> </li>

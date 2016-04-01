@@ -39,25 +39,25 @@ body {
 }
 .instrDrop {
   background-color: grey;
-  width:50%;
-  height: 37px;
+  width:65%;
+  height: 60px;
   position: relative;
   position: absolute;
   right:0;
   text-align: center;
-  padding-top: 13px;
+  padding-top: 20px;
   display: none;
 
 }
 .instrDroper {
   background-color: grey;
-  width:50%;
-  height: 37px;
+  width:65%;
+  height: 60px;
   position: relative;
   position: absolute;
   right:0;
   text-align: center;
-  padding-top: 13px;
+  padding-top: 20px;
   display: none;
 
 }
@@ -66,8 +66,6 @@ body {
   font-family: helvetica;
   margin-left: 4%;
   margin-right: 4%;
-  margin-top: 15px;
-  position: relative;
   text-decoration: none;
   color:black;
 
@@ -258,14 +256,15 @@ body {
   list-style-type: none;
 }
 .iFilters {
-  width:100%;
-  height:30px;
+  width 27%;
+  height:100px;
   float: right;
-  /*background-color: yellow;*/
   margin-top: 5%;
+  margin-right: 3%;
   text-align: right;
   font-family: helvetica;
 }
+
 .instImg {
   height: 150px;
   width: 150px;

@@ -77,10 +77,22 @@ angular.module('bandApp').controller('mainCtrl', function($scope, $http, ngCart)
 
     }
 
-    $scope.numItems = ngCart.getCart().items;
+    // $scope.numItems = ngCart.getCart().items;
 
     ngCart.setTaxRate(9.68);
     // ngCart.setShipping($scope.getItemAmount($scope.numItems));
+ $scope.unhideFilter = function() {
+   var z = document.getElementById('typeFilter');
+   var y = document.getElementById('typeFilterer');
+   z.style.display="inline";
+   y.style.display="inline";
+ }
+ $scope.hideFilter = function() {
+   var z = document.getElementById('typeFilter');
+   var y = document.getElementById('typeFilterer');
+   z.style.display="none";
+   y.style.display="none";
+ }
 
 
 

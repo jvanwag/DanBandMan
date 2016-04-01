@@ -18,16 +18,17 @@
     <a ui-sref='location' class="menuBut">location</a>
     <a class="menuBut" id='imenuDroper' ui-sref='maintHome'>maintenance</a>
     <a ui-sref="about" class="menuBut">about us</a>
-    <a class="menuBut" id="imenuDrop" ui-sref='instruments' ng-click="search = {type:''}">instruments</a>
+    <a class="menuBut" id="imenuDrop" ui-sref='instruments' ng-click="search = {type:''};unhideFilter()">instruments</a>
     <a ui-sref="home" class="menuBut">home</a>
 
   </header>
     <div class="instrDrop">
-      <a class="instrBut" ui-sref='instruments' ng-click="search = {type:'Clarinet'}">Clarinet</a>
-      <a class="instrBut" ui-sref='instruments' ng-click="search = {type:'Saxophone'}">Saxophone</a>
-      <a class="instrBut" ui-sref='instruments' ng-click="search = {type:'Trumpet'}">Trumpet</a>
-      <a class="instrBut" ui-sref='instruments' ng-click="search = {type:'Flute'}">Flute</a>
-      <a class="instrBut" ui-sref='instruments' ng-click="search = {type:'Other'}">Other</a>
+      <a class="instrBut" ui-sref='instruments' ng-click="search = {type:'Clarinet'};hideFilter()">Clarinet</a>
+      <a class="instrBut" ui-sref='instruments' ng-click="search = {type:'Saxophone'};hideFilter()">Saxophone</a>
+      <a class="instrBut" ui-sref='instruments' ng-click="search = {type:'Trumpet'};hideFilter()">Trumpet</a>
+      <a class="instrBut" ui-sref='instruments' ng-click="search = {type:'Flute'};hideFilter()">Flute</a>
+      <a class="instrBut" ui-sref='instruments' ng-click="search = {type:'Other'};hideFilter()">Other</a>
+      <a class="instrBut" ui-sref='instruments' ng-click="search = {subtype:'Accessories'};unhideFilter()">Accessories</a>
 
     </div>
     <div class="instrDroper">
