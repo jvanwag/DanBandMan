@@ -1,4 +1,4 @@
-<div class="adminPage">
+<div class="adminPage" id="adminP" style="display:none">
 <form class="addInst" name="newInstrumentForm">
   <span class="addHead">Add Instruments</span></br>
   <input class="bandInput" type='text' ng-model='instrument.brand' placeholder="brand" required/>
@@ -29,14 +29,15 @@
 
 <div class="changeForm">
   <span class="addHead">Remove Instruments</span></br>
-  <select ng-model="search" ng-click="showInfo()">
+  <select class="changeBar" ng-model="search" ng-click="showInfo()">
     <option  ng-repeat='instrument in instruments' value="{{instrument._id}}">{{instrument.brand}}-{{instrument.model}}</option>
   </select>
 
   <div class ="changeDisp" id="infoB" style="display:none" ng-repeat="instrument in instruments| filter: search">
   <strong>Type:</strong>{{instrument.type}}
   <strong>ID:</strong>{{instrument._id}}</br>
-  <strong>Brand:</strong>{{instrument.brand}}  <strong>Model:</strong>{{instrument.model}}</br>
+  <strong>Brand:</strong>{{instrument.brand}}  <strong>Model:</strong>{{instrument.model}}
+  <strong>SubType:</strong>{{instrument.subtype}}</br>
 
 <strong>pictures:</strong><img class="tinyPic" src='{{instrument.picture}}' /><img class="tinyPic" src='{{instrument.pictwo}}' /><img class="tinyPic" src='{{instrument.picthree}}' /></br>
 <strong>info:</strong>{{instrument.info}}</br>

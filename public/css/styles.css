@@ -1,5 +1,18 @@
+html {
+  /*background: url('../img/orcBack.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
+
+
 body {
-  position: relative;
+  background: url('../img/orcBack.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .topHeader {
   text-align: center;
@@ -76,11 +89,7 @@ body {
   width: 100%;
   height:1000px;
 }
-.aboutBack {
-  background-color: red;
-  width:100%;
-  height: 1000px;
-}
+
 .maintBack {
   margin-top: 100px;
 
@@ -91,7 +100,7 @@ body {
 .maintBut {
   text-decoration: none;
   font-weight: bolder;
-  color: black;
+  color: white;
   font-size: 7vh;
   margin-right: 5%;
   margin-left: 20%;
@@ -175,6 +184,7 @@ body {
   text-align: left;
   margin-left:5%;
   margin-top: 3%;
+  color:white;
 
 }
 .locInfo {
@@ -183,6 +193,7 @@ body {
   margin-left: 5%;
   margin-top:1%;
   font-size: 2vh;
+  color: white;
 }
 .adminPage{
   width: 100%;
@@ -195,8 +206,8 @@ body {
 .addInst {
   margin-top:20px;
   width:50%;
-  height:350px;
-  /*background-color: blue;*/
+  height:440px;
+  background-color: white;
   position: absolute;
   left:25%;
 }
@@ -225,12 +236,17 @@ body {
 }
 .changeForm {
   width:50%;
-  height:300px;
-  /*background-color: grey;*/
+  height:350px;
+  background-color: white;
   position: absolute;
-  margin-top: 450px;
+  margin-top: 500px;
   left:25%;
+  padding:1%;
 }
+/*.homeBack {
+  width:100%;
+}*/
+
 .changeDisp {
   float: right;
   font-family: helvetica;
@@ -246,23 +262,25 @@ body {
   font-family: helvetica;
   font-size: 2vh;
   margin-top: 3%;
-  /*background-color: green;*/
-  border-style: solid;
+  background-color: white;
+  border-radius: 5px;
+  /*border-style: solid;*/
 }
 .innerList {
   width:50%;
-  /*background-color: red;*/
+  /*background-color: white;*/
   margin-left: 25%;
   list-style-type: none;
 }
 .iFilters {
   width 27%;
-  height:100px;
+  height:40px;
   float: right;
   margin-top: 5%;
   margin-right: 3%;
   text-align: right;
   font-family: helvetica;
+  background-color: white;
 }
 
 .instImg {
@@ -273,47 +291,64 @@ body {
   bottom:0;
 }
 .largePic {
+  text-align: center;
   width:50%;
-  height:600px;
+  height:90vh;
   /*background-color: grey;*/
   position: fixed;
   margin-left: 25%;
   margin-right: 25%;
   display:none;
-  overflow-y: scroll;
-  overflow-x: scroll;
+  /*overflow-y: scroll;*/
+  /*overflow-x: scroll;*/
 }
 .bigImg {
   margin-left: 50px;
+  width:700px;
+  height:700px;
 }
 #closePic {
+  color:white;
   position: absolute;
   left:15px;
   top:15px;
-  font-size: 20px;
+  font-size: 30px;
 }
 .tinyPic {
   width:75px;
   height:75px;
 }
 .maintHeader {
+  text-align: center;
   font-family: helvetica;
   font-size: 4vh;
-  margin-top: 15px;
-  margin-left: 15%;
+  margin-top: 60px;
+  margin-left: 35%;
+  color:white;
+  width: 30%;
+  background-color: black;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 
 }
 .maintPage {
   width: 100%;
   display:flex;
   justify-content: space-between;
+  font-size: 2vh;
 }
 .maintText {
   font-family: helvetica;
+  color:white;
 }
 .textHolder {
   width: 45%;
-  margin-left: 5%;
+  margin-left: 27.5%;
+  background-color: black;
+  padding:2%;
+  border-radius: 5px;
 }
 .maintPic {
   width:300px;
@@ -324,6 +359,7 @@ body {
 .picHolder {
   width:45%;
   float: right;
+  display: none;
 }
 .cartHolder {
   position:fixed;
@@ -353,4 +389,37 @@ body {
   position: absolute;
   right:0;
   display:none;
+}
+.aboutBack {
+  /*background-image: url('https://www.awesomestories.com/images/user/a059cfdfbc.jpg');
+  background-size:cover;*/
+  width:100%;
+  height: 1000px;
+}
+.aboutHead {
+  text-align: center;
+  font-family: helvetica;
+  font-size: 4vh;
+  width:25%;
+  margin-left:37.5%;
+  margin-right:37.5%;
+  height:60px;
+  background-color: black;
+  color:white;
+  padding-top: 10px;
+  margin-top: 60px;
+  font-weight: bold;
+  text-decoration: underline;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.warInf {
+  border-radius: 5px;
+  width: 60%;
+  font-size: 2vh;
+  margin-right: 20%;
+  margin-left: 20%;
+  padding:2%;
+  background-color: black;
+  color:white;
 }

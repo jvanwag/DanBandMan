@@ -1,4 +1,4 @@
-angular.module('bandApp').controller('mainCtrl', function($scope, $http, ngCart){
+angular.module('bandApp').controller('mainCtrl', function($scope, $http, ngCart, $state){
 
   $scope.hide = false;
   $scope.dropShow = function(){
@@ -82,17 +82,26 @@ angular.module('bandApp').controller('mainCtrl', function($scope, $http, ngCart)
     ngCart.setTaxRate(9.68);
     // ngCart.setShipping($scope.getItemAmount($scope.numItems));
  $scope.unhideFilter = function() {
-   var z = document.getElementById('typeFilter');
-   var y = document.getElementById('typeFilterer');
+   var z = document.getElementById("typeFilter");
+   var y = document.getElementById("typeFilterer");
+   if (z) {
    z.style.display="inline";
    y.style.display="inline";
+  }
  }
  $scope.hideFilter = function() {
-   var z = document.getElementById('typeFilter');
-   var y = document.getElementById('typeFilterer');
+   var z = document.getElementById("typeFilter");
+   var y = document.getElementById("typeFilterer");
    z.style.display="none";
    y.style.display="none";
  }
+ // $scope.password = 'admin';
+ // $scope.verifyAdmin = function() {
+ //   var answer = prompt('please enter your password');
+ //   if (answer===$scope.password) {
+ //     $state.go('admin');
+ //   }
+ // }
 
 
 

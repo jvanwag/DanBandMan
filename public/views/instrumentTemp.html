@@ -23,7 +23,7 @@
        </br>
        ${{instrument.price}}</br><img class="instImg" ng-click="expandPic(instrument.picture)" ng-show="instrument.picture" ng-src="{{instrument.picture}}" /><img class="instImg" ng-click="expandPic(instrument.pictwo)" ng-show="instrument.pictwo" ng-src="{{instrument.pictwo}}" /><img class="instImg" ng-click="expandPic(instrument.picthree)" ng-show="instrument.picthree" ng-src="{{instrument.picthree}}" /></br>{{instrument.info}}
         </br>
-       <ngcart-addtocart id="{{instrument._id}}" name="{{instrument.type}}-{{instrument.brand}}-{{instrument.model}}" price="{{instrument.price}}" quantity="1" quantity-max="1">Add to Cart</ngcart-addtocart> </li>
+       <ngcart-addtocart id="{{instrument._id}}" name="{{instrument.type}}-{{instrument.subtype}}-{{instrument.brand}}-{{instrument.model}}" price="{{instrument.price}}" quantity="1" quantity-max="1">Add to Cart</ngcart-addtocart> </li>
    </ul>
 
 
